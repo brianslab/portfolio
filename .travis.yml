@@ -9,10 +9,10 @@ services:
 #  - tf_version=1.3.6 tf_init="-input=false" tf_val="" tf_plan="-lock=false -input=false" tf_apply="-auto-approve -input=false" docker_image="brianslab/portfolio"
 
 before_install:
-#  - wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
-#  - unzip terraform_"$tv_version"_linux_amd.zip
-#  - mv terraform /usr/local/bin/
-#  - rm terraform_"$tf_version"_linux_amd64.zip
+  #  - wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
+  #  - unzip terraform_"$tv_version"_linux_amd.zip
+  #  - mv terraform /usr/local/bin/
+  #  - rm terraform_"$tf_version"_linux_amd64.zip
   - docker build -t "$docker_image" .
 
 stages:
@@ -27,16 +27,16 @@ jobs:
         - echo "Testing new build"
         # standin for future tests
         - docker run "$docker_image" yarn lint
-    
+
     - stage: plan
       if: type = pull_request OR branch = main
-      script:s
+      script:
         - echo "Planning new build"
- #       - terraform init $tf_init
- #       - terraform validate $tf_val
- #       - terraform plan $tf_plan
+    #       - terraform init $tf_init
+    #       - terraform validate $tf_val
+    #       - terraform plan $tf_plan
 
     - stage: deploy
       if: type = push AND branch = main
-      script: 
+      script:
         - echo "Deploying new build"
