@@ -13,7 +13,7 @@ before_install:
   #  - unzip terraform_"$tv_version"_linux_amd.zip
   #  - mv terraform /usr/local/bin/
   #  - rm terraform_"$tf_version"_linux_amd64.zip
-  - docker build -t "$docker_image" .
+  - docker build -t $docker_image .
 
 stages:
   - test
@@ -26,7 +26,7 @@ jobs:
       script:
         - echo "Testing new build"
         # standin for future tests
-        - docker run "$docker_image" yarn lint
+        - docker run $docker_image yarn lint
 
     - stage: plan
       if: type = pull_request OR branch = main
