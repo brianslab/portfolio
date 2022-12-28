@@ -5,8 +5,8 @@ sudo: required
 services:
   - docker
 
-#env:
-#  - tf_version=1.3.6 tf_init="-input=false" tf_val="" tf_plan="-lock=false -input=false" tf_apply="-auto-approve -input=false" docker_image="brianslab/portfolio"
+env:
+  - tf_version=1.3.6 tf_init="-input=false" tf_val="" tf_plan="-lock=false -input=false" tf_apply="-auto-approve -input=false" docker_image="brianslab/portfolio"
 
 before_install:
   #  - wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
