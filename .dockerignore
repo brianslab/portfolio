@@ -17,6 +17,11 @@
 # production
 /build
 
+# CI/CD
+*terraform
+main.tf
+.travis.yml
+
 # misc
 .DS_Store
 *.pem
