@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/NavBar';
 import Head from 'next/head';
 
 export default function Home() {
@@ -27,9 +28,7 @@ export default function Home() {
         <link rel='manifest' href='/site.webmanifest' />
       </Head>
       <main>
-        <h1 className='text-3xl text-white font-bold font-mono flex place-content-center'>
-          Brian Kuhn
-        </h1>
+        <Navbar />
       </main>
     </>
   );
