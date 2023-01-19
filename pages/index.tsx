@@ -1,6 +1,17 @@
 import { Navbar } from '@/components';
 import Head from 'next/head';
 
+const pages = [
+  {
+    name: 'About',
+    link: '/about',
+  },
+  {
+    name: 'Resume',
+    link: '/resume',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -27,9 +38,7 @@ export default function Home() {
         />
         <link rel='manifest' href='/site.webmanifest' />
       </Head>
-      <main>
-        <Navbar home='Brian Kuhn' />
-      </main>
+      <Navbar home='Brian Kuhn' pages={pages} />
     </>
   );
 }
