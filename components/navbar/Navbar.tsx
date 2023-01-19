@@ -1,33 +1,32 @@
+import Link from 'next/link';
 import { NavbarProps } from './types';
 
 export function Navbar({ home = 'home', pages = [] }: NavbarProps) {
   const pageButtons = pages.map((page) => {
     return (
-      <li className='nav-item float-right'>
-        <a
-          className='nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out'
+      <li className='float-right' key={page.name}>
+        <Link
+          className='block pr-2 lg:px-2 py-2 text-gray-600 hover:shadow-md hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out'
           href={page.link}
-          data-mdb-ripple='true'
-          data-mdb-ripple-color='light'
         >
           {page.name}
-        </a>
+        </Link>
       </li>
     );
   });
 
   return (
     <header>
-      <nav className='navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between'>
-        <div className='navbar-collapse px-6 flex-wrap grow'>
-          <a
-            className='float-left nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out'
+      <nav className='shadow-md py-2 bg-white w-full relative flex items-center justify-between'>
+        <div className='px-6 flex-wrap grow'>
+          <Link
+            className='float-left block pr-2 lg:px-2 py-2 text-gray-600 hover:shadow-md hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out'
             href='/'
             // data-mdb-ripple='true'
             // data-mdb-ripple-color='dark'
           >
             {home}
-          </a>
+          </Link>
           <div className='ml-auto'>
             <ul>{pageButtons}</ul>
           </div>
