@@ -1,7 +1,7 @@
 import { NavbarProps } from './types';
 
 export function Navbar({ home = 'home', pages = [] }: NavbarProps) {
-  const renderedPages = pages.map((page) => {
+  const pageButtons = pages.map((page) => {
     return (
       <li className='nav-item float-right'>
         <a
@@ -29,7 +29,7 @@ export function Navbar({ home = 'home', pages = [] }: NavbarProps) {
             {home}
           </a>
           <div className='ml-auto'>
-            <ul>{renderedPages}</ul>
+            <ul>{pageButtons}</ul>
           </div>
         </div>
       </nav>
