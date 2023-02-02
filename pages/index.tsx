@@ -36,13 +36,16 @@ export default function Home() {
           <Link href='https://github.com/brianslab'>Check out my Github</Link>
         </Button>
       </div>
+      <div className='py-2 text-center text-lg underline underline-offset-4'>
+        Featured projects:
+      </div>
       <div className='flex text-lg py-4 gap-4 text-center place-content-center'>
         <Link href='https://briandkuhn.com'>Portfolio</Link>
         <Link href='https://github.com/brianslab/portfolio'>
           <AiFillGithub />
         </Link>
       </div>
-      <div className='flex text-lg py-4 gap-4 text-center place-content-center'>
+      <div className='flex text-lg gap-4 text-center place-content-center'>
         <Link href='https://rentcalc.briandkuhn.com'>Rent Calculator</Link>
         <Link href='https://github.com/brianslab/rentcalc'>
           <AiFillGithub />
