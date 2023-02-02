@@ -1,3 +1,7 @@
 export default function Resume() {
-  return <div>Resume</div>;
+  return (
+    <div>
+      <iframe src='/resume.pdf' className='h-screen w-screen' />
+    </div>
+  );
 }
