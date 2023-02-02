@@ -1,4 +1,7 @@
+import { Button } from '@/components';
 import Head from 'next/head';
+import Link from 'next/link';
+import { AiFillGithub } from 'react-icons/ai';
 
 export default function Home() {
   return (
@@ -26,6 +29,25 @@ export default function Home() {
         />
         <link rel='manifest' href='/site.webmanifest' />
       </Head>
+      <div className='py-2 text-center text-2xl grid place-content-center'>
+        Brian Kuhn
+        <p className='text-lg'>Front-end Engineer</p>
+        <Button success={true} rounded={true} className='text-base'>
+          <Link href='https://github.com/brianslab'>Check out my Github</Link>
+        </Button>
+      </div>
+      <div className='flex text-lg py-4 gap-4 text-center place-content-center'>
+        <Link href='https://briandkuhn.com'>Portfolio</Link>
+        <Link href='https://github.com/brianslab/portfolio'>
+          <AiFillGithub />
+        </Link>
+      </div>
+      <div className='flex text-lg py-4 gap-4 text-center place-content-center'>
+        <Link href='https://rentcalc.briandkuhn.com'>Rent Calculator</Link>
+        <Link href='https://github.com/brianslab/rentcalc'>
+          <AiFillGithub />
+        </Link>
+      </div>
     </>
   );
 }

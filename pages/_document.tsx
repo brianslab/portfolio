@@ -2,10 +2,10 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import { Navbar } from '@/components';
 
 const pages = [
-  {
-    name: 'About',
-    link: '/about',
-  },
+  // {
+  //   name: 'About',
+  //   link: '/about',
+  // },
   {
     name: 'Resume',
     link: '/resume',
